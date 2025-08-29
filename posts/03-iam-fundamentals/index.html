@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-03-17">
 
-<title>Danielle-labs</title>
+<title>Learning IAM Fundamentals – Danielle-labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Danielle-labs</span>
     </a>
   </div>
@@ -150,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -173,222 +114,80 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Danielle-labs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Learning IAM Fundamentals</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">iam</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 17, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="YWN0aXZlLWRpcmVjdG9yeQ==">active-directory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXp1cmU=">azure <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aWFt">iam <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvamVjdHM=">projects <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJpdHk=">security <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>I first learned about Identity and Access Management (IAM) while exploring AWS. The AWS documentation provided insights into what IAM is and why it is used. Further exploration of AWS’ IAM service involved creating users, assigning various permissions, and adding policies for each individual. This experience sparked a growing curiosity that continues to expand.</p>
+<!--more-->
+<p>While browsing Reddit, I came across a link to a Udemy course called <a href="https://www.udemy.com/course/iam-identity-access-management-a-vendor-neutral-course/"><em>Identity and Access Management (IAM): Vendor Neutral Course</em></a> by Ahmed Abdelghafar and decided to purchase it during a sale. Although the course is short (~2 hours), it offers a wealth of knowledge. Some of the concepts discussed were familiar to me. Topics like Mulit-Factor Authentication, Single Sign-On(SSO), and Zero Trust to name a few were great to review and I even gained a better understanding of those concepts. However, several concepts were entirely new to me. I decided to create a post describing a few key concepts I learned during this course.</p>
+<section id="identity-lifecycle-management" class="level3">
+<h3 class="anchored" data-anchor-id="identity-lifecycle-management"><strong>Identity Lifecycle Management</strong></h3>
+<p>Identity Lifecycle Management oversees the processes that manage the entire user identity lifecycle within an organization. It consists of handling joiners, movers, and leavers to ensure that access is correctly granted, adjusted, or removed as needed. Joiners refer to newly hired employees, movers refer to individuals who have either received a promotion or changed departments, and leavers refer to those who have resigned or are otherwise no longer with the organization. It is crucial for access rights to align with users’ job roles, ensuring they have only the necessary permissions—nothing more. This concept is known as the Principle of Least Privilege. Implementing this principle minimizes the attack surface and prevents the abuse of privileges.</p>
+</section>
+<section id="access-control-types" class="level3">
+<h3 class="anchored" data-anchor-id="access-control-types"><strong>Access Control Types</strong></h3>
+<p>The course discussed two main types of access control:</p>
+<ul>
+<li>RBAC (Role-Based Access Control): Access is assigned based on the user’s role.</li>
+<li>ABAC (Attribute-Based Access Control): Access is assigned based on user attributes (e.g., location, employment type).</li>
+</ul>
+<p>Other access control types include:</p>
+<ul>
+<li>PBAC (Policy-Based Access Control): Access is based on predefined policies.</li>
+<li>DAC (Discretionary Access Control): Allows resource owners to determine and manage access to their data.</li>
+<li>MAC (Mandatory Access Control): A security model that determines access to resources based on security labels and clearance levels.</li>
+</ul>
+<p>Access control mechanisms help protect sensitive information, ensure regulatory compliance, and minimize insider threats.</p>
+</section>
+<section id="compliance" class="level3">
+<h3 class="anchored" data-anchor-id="compliance"><strong>Compliance</strong>&nbsp;</h3>
+<p>During this section of the course, I realized that I was more familiar with compliance than I initially thought. I follow many cybersecurity professionals on social media, so much of the terminology and many of the frameworks discussed in the course were already familiar to me.</p>
+<p>GRC (Governance, Risk, and Compliance) is a term I frequently encounter. Governance involves defining and enforcing policies to control access to data and other resources within an organization. Risk refers to the potential for harm or loss due to cyberattacks or data breaches. Compliance entails adhering to laws, standards, and regulations to safeguard sensitive data and other digital assets from threats. Compliance also includes auditing, reporting, and continuous monitoring to detect potential violations.</p>
+<p>The course covered several compliance frameworks:</p>
+<ul>
+<li>NIST (National Institute of Standards and Technology): A US framework providing security guidelines for federal agencies and serves as a baseline for other industries.</li>
+<li>PCI-DSS(Payment Card Industry Data Security Standard): A set of policies for ensuring the secure handling credit card data, including access controls and data protection practices.</li>
+<li>HIPAA(Health Insurance Portability and Accountability Act): A US law requiring health care organizations to protect patient data with specific guidelines on access control and data privacy.</li>
+<li>GDPR(General Data Protection Regulation): a European Union regulation focused on data privacy and protection with guidelines on who can access personal data, where it’s stored and how it’s processed.</li>
+</ul>
+<p>When I initially thought of compliance frameworks, the first one that came to mind was a financial regulation I learned about in a business law course in college. Although it was not mentioned in the course, SOX (Sarbanes-Oxley Act) is something I have seen referenced in job descriptions. SOX is a federal law that establishes requirements for financial record-keeping and reporting in corporations. It was enacted to protect investors from fraudulent financial reporting by corporations. This law was implemented following several widely reported financial scandals, most notably the Enron scandal.</p>
+<p>Overall, completing this course strengthened my confidence in foundational IAM concepts. Although this course doesn’t everything every concept or tool, I think it serves as a excellent starting point for further exploration into Identity and Access Management.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1756425600000" data-listing-file-modified-sort="1756482364250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
-This is a post with executable code.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Aug 29, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cw==" data-listing-date-sort="1756166400000" data-listing-file-modified-sort="1756482364251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-This is the first post in a Quarto blog. Welcome!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Aug 26, 2025
-</div>
-<div class="listing-author">
-Tristan O’Malley
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YWN0aXZlLWRpcmVjdG9yeSUyQ2F6dXJlJTJDaWFtJTJDcHJvamVjdHMlMkNzZWN1cml0eQ==" data-listing-date-sort="1751241600000" data-listing-file-modified-sort="1756482364250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1412">
-<div class="thumbnail"><a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/06-how-i-built-an-active-directory-lab-in-azure/images/virtual_network.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">How I Built An Active Directory Lab in Azure</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWN0aXZlLWRpcmVjdG9yeQ=='); return false;">active-directory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXp1cmU='); return false;">azure</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aWFt'); return false;">iam</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdHM='); return false;">projects</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">
-Active Directory is a Microsoft directory service that manages and organizes resources including users, computers, and other devices. I wanted to gain experience with this…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">
-<div class="listing-date">
-Jun 30, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YXp1cmU=" data-listing-date-sort="1745280000000" data-listing-file-modified-sort="1756482364235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="321">
-<div class="thumbnail"><a href="./posts/04-azure-fundamentals/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/04-azure-fundamentals/index.html" class="no-external">My Experience with the Azure Fundamentals AZ-900 Exam</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXp1cmU='); return false;">azure</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/04-azure-fundamentals/index.html" class="no-external">
-It’s been a bit quiet on my blog, but I’ve kept busy!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/04-azure-fundamentals/index.html" class="no-external">
-<div class="listing-date">
-Apr 22, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="aWFt" data-listing-date-sort="1742947200000" data-listing-file-modified-sort="1756482364234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="545">
-<div class="thumbnail"><a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/03-more-iam-fundamentals/images/spotify(2).png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">More IAM Fundamentals</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aWFt'); return false;">iam</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">
-I found another IAM course on Udemy. This course called Foundations of Identity Access Management, covered much of the same topics the previous course covered. However, it…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="aWFt" data-listing-date-sort="1742169600000" data-listing-file-modified-sort="1756482364233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="722">
-<div class="thumbnail"><a href="./posts/03-iam-fundamentals/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/03-iam-fundamentals/index.html" class="no-external">Learning IAM Fundamentals</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aWFt'); return false;">iam</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/03-iam-fundamentals/index.html" class="no-external">
-I first learned about Identity and Access Management (IAM) while exploring AWS. The AWS documentation provided insights into what IAM is and why it is used. Further…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/03-iam-fundamentals/index.html" class="no-external">
-<div class="listing-date">
-Mar 17, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

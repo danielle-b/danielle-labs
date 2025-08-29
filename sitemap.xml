@@ -2,18 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://danielle-b.github.io/danielle-labs/index.html</loc>
-    <lastmod>2025-08-29T15:28:14.326Z</lastmod>
+    <lastmod>2025-08-29T15:46:04.233Z</lastmod>
   </url>
   <url>
     <loc>https://danielle-b.github.io/danielle-labs/posts/post-with-code/index.html</loc>
-    <lastmod>2025-08-29T15:28:14.326Z</lastmod>
+    <lastmod>2025-08-29T15:46:04.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielle-b.github.io/danielle-labs/posts/03-iam-fundamentals/index.html</loc>
+    <lastmod>2025-08-29T15:46:04.233Z</lastmod>
   </url>
   <url>
     <loc>https://danielle-b.github.io/danielle-labs/posts/welcome/index.html</loc>
-    <lastmod>2025-08-29T15:28:14.326Z</lastmod>
+    <lastmod>2025-08-29T15:46:04.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielle-b.github.io/danielle-labs/posts/06-how-i-built-an-active-directory-lab-in-azure/index.html</loc>
+    <lastmod>2025-08-29T15:46:04.250Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielle-b.github.io/danielle-labs/posts/04-azure-fundamentals/index.html</loc>
+    <lastmod>2025-08-29T15:46:04.235Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danielle-b.github.io/danielle-labs/posts/03-more-iam-fundamentals/index.html</loc>
+    <lastmod>2025-08-29T15:46:04.234Z</lastmod>
   </url>
   <url>
     <loc>https://danielle-b.github.io/danielle-labs/about.html</loc>
-    <lastmod>2025-08-29T15:28:14.326Z</lastmod>
+    <lastmod>2025-08-29T15:46:04.233Z</lastmod>
   </url>
 </urlset>

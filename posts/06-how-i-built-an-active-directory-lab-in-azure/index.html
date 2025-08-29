@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-06-30">
 
-<title>Danielle-labs</title>
+<title>How I Built An Active Directory Lab in Azure – Danielle-labs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-d68be38d83eca2bb035acf846ffba811.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,77 +68,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Danielle-labs</span>
     </a>
   </div>
@@ -150,7 +91,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -173,222 +114,187 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Danielle-labs</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">How I Built An Active Directory Lab in Azure</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">active-directory</div>
+                <div class="quarto-category">azure</div>
+                <div class="quarto-category">iam</div>
+                <div class="quarto-category">projects</div>
+                <div class="quarto-category">security</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 30, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="YWN0aXZlLWRpcmVjdG9yeQ==">active-directory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YXp1cmU=">azure <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aWFt">iam <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvamVjdHM=">projects <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2VjdXJpdHk=">security <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1756425600000" data-listing-file-modified-sort="1756482364250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail"><a href="./posts/post-with-code/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
+<p>Active Directory is a Microsoft directory service that manages and organizes resources including users, computers, and other devices. I wanted to gain experience with this service and decided to create an Active Directory lab in Microsoft Azure.</p>
+<p>What is the point of learning Active Directory? Many companies with Windows-based infrastructure rely on it heavily to manage users, computers, and resources across their network. Even as organizations move to the cloud, understanding it will help me manage hybrid environments where both on-premises and cloud identity services are used.</p>
+<p>This is part 1 of a series where I learn about Active Directory and its features.</p>
+<p>Step 1: Create a Resource Group</p>
+<p>I needed to create a resource group that would hold the resources I needed for the project. The purpose of a resource group is to organize and group resources, simplifying management. If needed, I could delete the resources group and it would delete the resources associated with it. It made cost management easier. I was able to set up a budget for my resource group, which helped me track the costs of my resources.</p>
+<p>Step 2: Create a Virtual Network (VNet) and Subnets</p>
+<p>Inside of my resource group, I created a virtual network to host my virtual machines. In this step, I edited the default subnet range so that it fell within the defined range of the IPv4 address space of the virtual network. I provisioned Azure Bastion within my virtual network, creating my AzureBastionSubnet. AzureBastionSubnet is the mandatory subnet for the Azure Bastion service and it needs at least a /26 address range. The purpose of Azure Bastion was to provide a secure RDP connection to my VMs. RDP stands for Remote Desktop Protocol and allows users to remotely access and control a computer over a network. Note that with Azure Bastion, my VMs didn’t need a public IP address and I didn’t need to open any inbound ports.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/virtual_network.png" class="img-fluid figure-img"></p>
+<figcaption>Creating a virtual network in Microsoft Azure.</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/post-with-code/index.html" class="no-external">
-This is a post with executable code.
-</a></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bastion.png" class="img-fluid figure-img"></p>
+<figcaption>Created an Azure Bastion</figcaption>
+</figure>
 </div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Aug 29, 2025
+<p>Step 3: Deploy Virtual Machines for Domain Controllers</p>
+<p>Next, I set up two virtual machines with the Windows Server 2019 image that will serve as my domain controllers. A domain controller is a server that responds to authentication requests from users and computers. These domain controllers will host Active Directory and its services. I launched the virtual machines in an availability set to ensure high availability and a lower risk of a single point of failure. I also changed the default size of the VMs to Standard B1ms to optimize cost.</p>
+<p><img src="images/virtual_machine-300x81.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/virtual_machine_1.png" class="img-fluid figure-img"></p>
+<figcaption>Created virtual network in Azure</figcaption>
+</figure>
 </div>
-<div class="listing-author">
-Harlow Malloc
+<p>Step 4: Deploy Bastion</p>
+<p>After I navigated to my VNet and selected Bastion, I deployed the service into my AzureSubnetBastion I created earlier. This will automatically created a public IP for the Bastion service itself. From there, I was able to connect to it from my browser using my VM username and password.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/connect_bastion.png" class="img-fluid figure-img"></p>
+<figcaption>Connect to virtual machine using Bastion</figcaption>
+</figure>
 </div>
-</a>
+<p>Step 5: Configure the first domain controller</p>
+<p>Once I connected to my VM, the Server Manager dashboard opened up. From the dashboard,&nbsp; I went to Computer Management &gt; Disk Management to configure my disk. This disk hosted my Active Directory. Then, I went to Manage &gt; Add Roles and Features, I went through the screens shown here to install Active Directory Domain Services. First, I choose role-based configuration. Then, I selected my destination server. Next, I checked off Active Directory Domain Services as my server role.&nbsp; Note that I already have this installed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/roles.png" class="img-fluid figure-img"></p>
+<figcaption>Add Roles and Features</figcaption>
+</figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/installationtype.png" class="img-fluid figure-img"></p>
+<figcaption>Type of Installation</figcaption>
+</figure>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cw==" data-listing-date-sort="1756166400000" data-listing-file-modified-sort="1756482364251" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<div class="thumbnail"><a href="./posts/welcome/index.html" class="no-external">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/destinationserver.png" class="img-fluid figure-img"></p>
+<figcaption>Select server to install roles and features</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ad_ds.png" class="img-fluid figure-img"></p>
+<figcaption>Install Active Directory Domain Services</figcaption>
+</figure>
+</div>
+<p>Step 6: Promote the first domain controller</p>
+<p>Promoting the domain controller simply means that converting a server into a domain controller. Because I already have this installed, I decided to grab screenshots I took from a <a href="https://www.udemy.com/course/build-an-active-directory-lab-in-microsoft-azure-in-1-hour/">Udemy</a> course that helped me with this step. On the installation progress page, I selected the “Promote Your Server…” that you see underlined. In the Deployment Configuration panel, I added a new forest, which is the top level of organization within Active Directory. The forest contains domains, users, devices, etc in Active Directory. In this step, I specified my root domain name. Next, in the Domain Controller Options panel, I made my domain controller a DNS server by checking it off. For the Paths panel, I changed my disk paths to reflect the the disk configuration I did earlier.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/promote.png" class="img-fluid figure-img"></p>
+<figcaption>promote to domain controller</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/forest.png" class="img-fluid figure-img"></p>
+<figcaption>Add a new forest</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dc_options.png" class="img-fluid figure-img"></p>
+<figcaption>domain controller options screen</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rename_disks.png" class="img-fluid figure-img"></p>
+<figcaption>Rename disks</figcaption>
+</figure>
+</div>
+<p>After this step, my connection restarted. While my connection was restarting, I changed my Private IP for my domain controller from Dynamic to Static to ensure that my private IP address never changes. This private IP is important because it served as a DNS server for my Active Directory, is necessary to promote the second domain controller and needs to be able to read the DNS of my root domain name.</p>
+<p>Step 7: Configure DNS</p>
+<p>I went back to my VNet’s settings in Azure, changing the DNS servers from a public DNS to a Custom server using the private IP address of my first domain controller. This will ensure that the VMs in the VNet resolve my domain name. I restarted my VMs to make sure that this change was picked up.</p>
+<p>Step 8: Promote &amp; Configure second domain controller</p>
+<p>I combined these two steps because setting up my second domain controller was the same as the first with a few exceptions. First, in the ‘Deployment Configuration’ panel shown above, I chose the ‘Add a domain controller to an existing domain’ option. Then, I supplied the credentials I created for the first domain controller. After the second domain controller was configured and promoted, I configured the DNS like I did with the first one. The purpose of creating a second domain controller is for redundancy. If my first domain controller goes down, my network will still operate because I have a second one.</p>
+<p>Step 9: Create a User</p>
+<p>I wanted to test out my environment to see if I would be able to create a test user. From the Server Manager dashboard, I went to Tools &gt; Active Directory Users and Computers. Next, I went to my domain, navigated to my Users folder and began the process of creating a new user. <img src="images/create_ad_user.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/test_user.png" class="img-fluid figure-img"></p>
+<figcaption>Creating a test user In Active Directory</figcaption>
+</figure>
+</div>
+<p>I went through the screens to create my new user. And, just like that my new user was created! When I switch between domain controllers, the user I created reflected on both servers. This is an example of replication in Active Directory. If I’m working off of different domain controllers, changes like user creation get synced across the environment.</p>
+<p><img src="images/user_created.png" class="img-fluid"></p>
+<p>Step 10: Joining a Client Machine to the Domain</p>
+<p>I launched a third VM with the Windows Server 2022 image. This will serve as my client machine. I made sure to launch it in the same resource group as that holds my other resources(domain controller, network, etc). I then used Azure Bastion to connect to my VM.</p>
+<p>Inside my client VM, I opened the Control Panel and navigated to Network and Internet &gt; Network and Sharing Center. Then after clicking the Ethernet icon, I set the DNS Server to the private IP address of my first domain controller. This is so this machine could find the root domain I created.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ethernet.png" class="img-fluid figure-img"></p>
+<figcaption>Showing ethernet page</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ethernet_properties.png" class="img-fluid figure-img"></p>
+<figcaption>Selecting the Ethernet property</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/IP_Properties.png" class="img-fluid figure-img"></p>
+<figcaption>Use the DNS Server address</figcaption>
+</figure>
+</div>
+<p>I joined the the domain by once again opening the Control Panel and this time navigating to System &amp; Security. From there, a page opened up and I went to Advanced System Settings &gt; Computer Name &gt; Change… &gt;Member of Domain. I entered the root domain name I created earlier. After a few seconds, a prompt appeared where I entered the credentials of my first domain controller. Seconds after that I received a message welcoming me to my domain.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/change_domain.png" class="img-fluid figure-img"></p>
+<figcaption>Entered domain</figcaption>
+</figure>
+</div>
+<p>After hitting okay, another message appeared letting me know that the machine had to restart before the changes took affect. After the reboot, I verified the domain login using nslookup. I also tried my hand in using Powershell to accomplish this same task.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/powershell.png" class="img-fluid figure-img"></p>
+<figcaption>Using powershell to verify domain login.</figcaption>
+</figure>
+</div>
+<p>That is all for part 1! Through building this lab, not only did I learn about Active Directory but I gained a better understanding of networking. I learned a more secure way of connection to virtual machines using Bastion. A lesson I’ll remember is that using RDP to connect to virtual machines exposes RDP ports and this is considered a security risk. This lab was great because it introduced me to Powershell. I plan to use Powershell for future labs and projects so I am dedicating my time to learning it.</p>
 
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-This is the first post in a Quarto blog. Welcome!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Aug 26, 2025
-</div>
-<div class="listing-author">
-Tristan O’Malley
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="YWN0aXZlLWRpcmVjdG9yeSUyQ2F6dXJlJTJDaWFtJTJDcHJvamVjdHMlMkNzZWN1cml0eQ==" data-listing-date-sort="1751241600000" data-listing-file-modified-sort="1756482364250" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1412">
-<div class="thumbnail"><a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/06-how-i-built-an-active-directory-lab-in-azure/images/virtual_network.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">How I Built An Active Directory Lab in Azure</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YWN0aXZlLWRpcmVjdG9yeQ=='); return false;">active-directory</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXp1cmU='); return false;">azure</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('aWFt'); return false;">iam</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdHM='); return false;">projects</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('c2VjdXJpdHk='); return false;">security</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">
-Active Directory is a Microsoft directory service that manages and organizes resources including users, computers, and other devices. I wanted to gain experience with this…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/06-how-i-built-an-active-directory-lab-in-azure/index.html" class="no-external">
-<div class="listing-date">
-Jun 30, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="YXp1cmU=" data-listing-date-sort="1745280000000" data-listing-file-modified-sort="1756482364235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="321">
-<div class="thumbnail"><a href="./posts/04-azure-fundamentals/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/04-azure-fundamentals/index.html" class="no-external">My Experience with the Azure Fundamentals AZ-900 Exam</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('YXp1cmU='); return false;">azure</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/04-azure-fundamentals/index.html" class="no-external">
-It’s been a bit quiet on my blog, but I’ve kept busy!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/04-azure-fundamentals/index.html" class="no-external">
-<div class="listing-date">
-Apr 22, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="aWFt" data-listing-date-sort="1742947200000" data-listing-file-modified-sort="1756482364234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="545">
-<div class="thumbnail"><a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">
-
-<p class="card-img-top"><img src="posts/03-more-iam-fundamentals/images/spotify(2).png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">More IAM Fundamentals</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aWFt'); return false;">iam</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">
-I found another IAM course on Udemy. This course called Foundations of Identity Access Management, covered much of the same topics the previous course covered. However, it…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/03-more-iam-fundamentals/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="aWFt" data-listing-date-sort="1742169600000" data-listing-file-modified-sort="1756482364233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="722">
-<div class="thumbnail"><a href="./posts/03-iam-fundamentals/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/03-iam-fundamentals/index.html" class="no-external">Learning IAM Fundamentals</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('aWFt'); return false;">iam</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/03-iam-fundamentals/index.html" class="no-external">
-I first learned about Identity and Access Management (IAM) while exploring AWS. The AWS documentation provided insights into what IAM is and why it is used. Further…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/03-iam-fundamentals/index.html" class="no-external">
-<div class="listing-date">
-Mar 17, 2025
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
