@@ -12,7 +12,7 @@ website:
         href: https://www.linkedin.com/in/daniellebrantley/
 format:
   html:
-    theme: cosmo
+    theme: journal
     css: styles.css
 
 
