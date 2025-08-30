@@ -2,8 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
       "/posts/06-how-i-built-an-active-directory-lab-in-azure/index.html",
       "/posts/04-azure-fundamentals/index.html",
       "/posts/03-more-iam-fundamentals/index.html",
